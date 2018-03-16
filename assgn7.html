@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+	div{
+		display:inline;
+	}
+</style>
+</head>
+<body>
+You do not like <div class="w1"></div> <div class="w2"></div> and <div class="w3"></div>?
+I do not like them, <div class="name"></div> -I-am.
+Could you, would you, with a <div class="w4"></div>?
+I would not, could not, with a <div class="w4"></div>!
+Would you, could you, on a <div class="w5"></div>?
+I could not, would not, on a <div class="w5"></div>.
+I will not, will not, with a <div class="w4"></div>.
+I will not eat them in the rain.
+I will not eat them on a train.
+Not in the dark! Not in a tree!
+Not in a car! You let me be!
+I do not like them in a box.
+I do not like them with a fox.
+I will not eat them in a house.
+I do not like them with a mouse.
+I do not like them here or there.
+I do not like them ANYWHERE!
+I do not like <div class="w1"></div> <div class="w2"></div> and <div class="w3"></div>!
+I do not like them, <div class="name"></div>-I-am.       
+
+<script>
+	var name=prompt("Enter your name : ","UserName");
+	var name1=prompt("Enter a word : ","word");
+	var name2=prompt("Enter a word : ","word");
+	var name3=prompt("Enter a word : ","word");
+	var name4=prompt("Enter a word : ","word");
+	var name5=prompt("Enter a word : ","word");
+	var colour=prompt("Enter a color in hex format : ","#000000");
+	var a=document.getElementsByClassName("name");
+	for (var i = a.length - 1; i >= 0; i--) {
+		a[i].innerHTML="Hello "+name;
+		a[i].style.color=colour;
+	}
+	a=document.getElementsByClassName("w1");
+	for (var i = a.length - 1; i >= 0; i--) {
+		a[i].innerHTML=name1;a[i].style.color=colour;
+	}
+	a=document.getElementsByClassName("w2");
+	for (var i = a.length - 1; i >= 0; i--) {
+		a[i].innerHTML=name2;a[i].style.color=colour;
+	}
+	a=document.getElementsByClassName("w3");
+	for (var i = a.length - 1; i >= 0; i--) {
+		a[i].innerHTML=name3;a[i].style.color=colour;
+	}
+	a=document.getElementsByClassName("w4");
+	for (var i = a.length - 1; i >= 0; i--) {
+		a[i].innerHTML=name4;a[i].style.color=colour;
+	}
+	a=document.getElementsByClassName("w5");
+	for (var i = a.length - 1; i >= 0; i--) {
+		a[i].innerHTML=name5;a[i].style.color=colour;
+	}
+</script>
+</body>
+</html>

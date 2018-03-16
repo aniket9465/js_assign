@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		var a=0;
+		function f()
+		{
+		var s=document.getElementById("img");	
+			++a;
+			if(a%4==0)
+				s.src="on.png";
+			if(a%4==1)s.src="on1.png";
+			if(a%4==2)s.src="on2.png";
+		    if(a%4==3)s.src="off.png";
+		}
+	</script>
+</head>
+<body>
+	<img src="on.png" style="height: 50vh" onclick="f()" id="img">
+</body>
+</html>

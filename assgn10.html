@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+</head>
+<body>
+	<img id="bulb" src="off.png" style="height: 50vh;width: 25vw;display: inline"/>
+	<img id="bulb1" src="off1.png" style="height: 50vh;width: 25vw;display: inline"/>
+	<img id="bulb2" src="off2.png" style="height: 50vh;width: 25vw;display: inline"/>
+	<img id="ch" src="change.png" style="height: 50vh;width: 25vw;display: inline"/>
+<script>
+	function f1(){document.getElementById("bulb").src="on.png"}
+	function f2(){document.getElementById("bulb").src="off.png"}
+	function f3(){document.getElementById("bulb1").src="on1.png"}
+	function f4(){document.getElementById("bulb1").src="off1.png"}
+	function f5(){document.getElementById("bulb2").src="on2.png"}
+	function f6(){document.getElementById("bulb2").src="off2.png"}
+	document.getElementById("bulb").onmouseover=function  f(){f1()};
+	document.getElementById("bulb").onmouseout=function  f(){f2()};
+	document.getElementById("bulb1").onmouseover=function  f(){f3()};
+	document.getElementById("bulb1").onmouseout=function  f(){f4()};
+	document.getElementById("bulb2").onmouseover=function  f(){f5()};
+	document.getElementById("bulb2").onmouseout=function  f(){f6()};
+	document.getElementById("ch").onmouseover=function f(){f1();f3();f5();};
+	document.getElementById("ch").onmouseout=function f(){f2();f4();f6();};
+</script>
+</body>
+</html>

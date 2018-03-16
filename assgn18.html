@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+</head>
+<body onunload="cl()">
+	<script type="text/javascript">
+		var i,j,k,l,m,h,w;
+		h=window.screen.height;
+		w=window.screen.width;
+		function op()
+		{
+			j=window.open("https://www.google.com","_blank","height=300,width=300,left="+(w-300)+",top="+(h-h)+"");
+			i=window.open("https://www.google.com","_blank","height=300,width=300,left="+(w-300)+",top="+(h-300)+"");
+			k=window.open("https://www.google.com","_blank","height=300,width=300,left="+(w-w)+",top="+(h-h)+"");
+			l=window.open("https://www.google.com","_blank","height=300,width=300,left="+(w-w)+",top="+(h-300)+"");
+			m=window.open("https://www.google.com","_blank","height=300,width=300,left="+(w/2-150)+",top="+(h/2-150)+"");
+		}
+		function cl()
+		{
+			if(i!=null)
+				i.close();
+			if(j!=null)
+				j.close();
+			if(k!=null)
+				k.close();
+			if(l!=null)
+				l.close();
+
+			if(m!=null)
+				m.close();
+		}
+	</script>
+	<img src="google.png" style="height: 10vh" id="img" onclick="op()">
+</body>
+</html>

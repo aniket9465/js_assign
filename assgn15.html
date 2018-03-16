@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+
+		var s=document.getElementById("img");	
+		var fb=document.getElementById("fb");
+		var bb=document.getElementById("bb");
+		function f()
+		{s=document.getElementById("img");fb=document.getElementById("fb");
+		bb=document.getElementById("bb");
+			if(a%4==0)
+				s.src="on.png";
+			if(a%4==1)s.src="on1.png";
+			if(a%4==2)s.src="on2.png";
+		    if(a%4==3)s.src="off.png";
+		}
+		var a=0;
+		function bf()
+		{s=document.getElementById("img");fb=document.getElementById("fb");
+		bb=document.getElementById("bb");
+			--a;
+			if(a==0){
+				bb.style="display:none;height: 10vh";
+				
+			}fb.style="display:inline;height: 10vh";
+			f();
+		}
+		function ff()
+		{ s=document.getElementById("img");fb=document.getElementById("fb");
+		bb=document.getElementById("bb");
+			++a;
+			if(a==3){
+				fb.style="display:none;height: 10vh";
+				
+			}bb.style="display:inline;height: 10vh";
+			f();
+
+		}
+		
+	</script>
+</head>
+<body>
+	<img src="marble.png" style="height: 10vh;" id="img">
+</body>
+</html>

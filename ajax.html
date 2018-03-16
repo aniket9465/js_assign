@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+	USERNAME : <input type="text" name="username" id="un">
+	PASSWORD : <input type="password" name="password" id="ps">
+	<div id="demo"></div>
+	<button type="button" onclick="f()">submit</button>
+	<script type="text/javascript">
+		function f(){
+var un=document.getElementById("un").value;
+		var ps=document.getElementById("ps").value;
+		
+		var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange=function f1(){
+				 if (this.readyState == 4 && this.status == 200) {
+        var myObj = JSON.parse(this.responseText);
+        document.getElementById("demo").innerHTML =myObj["combination"];
+    }
+			}
+			var out = encodeURI("username="+un+"&"+"password="+ps);
+		xhttp.open("POST","http://192.168.121.187/first_year/dhruv/my_machau_api/login_demo.php ",true);
+		xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		console.log(un);
+		xhttp.send(out);
+	}
+	</script>
+</body>
+</html>

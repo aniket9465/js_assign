@@ -1,0 +1,111 @@
+<!--<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		var timer;
+		var a=0,radius=200;
+	</script>
+</head>
+<body>
+	<img src="marble.png" style="height: 10vh" id="img">
+	<script type="text/javascript">
+		var div=document.getElementById("img");
+		div.onmouseout=function(){change1();};
+		div.onmouseover=function(){clearTimeout(timer)};
+		function change1()
+		{
+			++a;
+			 angle                 = Math.PI * (a / 32);
+    div.style.position        = "absolute";
+    div.style.left            = ((Math.sin(angle) * radius) + radius) + "px";
+    div.style.top             = ((Math.cos(angle) * radius) + radius) + "px";
+			timer=setTimeout("change1()", 30);
+		}
+		change1();
+	</script>
+</body>
+</html>-->
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		var timer;
+		var a=0,radius=200;
+	</script>
+</head>
+<body>
+	<img src="marbleo.png" style="height: 10vh;z-index:2" id="img">
+	<img src="marble.png" style="height: 10vh" id="img1">
+	<img src="marble.png" style="height: 10vh" id="img2">
+	<img src="marble.png" style="height: 10vh" id="img3">
+	<img src="marble.png" style="height: 10vh" id="img4">
+	<img src="marble.png" style="height: 10vh" id="img5">
+	<img src="marble.png" style="height: 10vh" id="img6">
+	<script type="text/javascript">
+		var div=document.getElementById("img6");
+		div.onmouseout=function(){change1();};
+		div.onmouseover=function(){clearTimeout(timer)};
+		div.onmouseover=function(){clearTimeout(timer)};
+		++a;
+		angle                 = Math.PI * (a / 3);
+             div.style.position        = "absolute";
+             div.style.left            = ((Math.sin(angle) * radius) + radius) + "px";
+             div.style.top             = ((Math.cos(angle) * radius) + radius) + "px";
+		div=document.getElementById("img5");
+		div.onmouseout=function(){change1();};
+		div.onmouseover=function(){clearTimeout(timer)};
+		++a;
+		angle                 = Math.PI * (a / 3);
+             div.style.position        = "absolute";
+             div.style.left            = ((Math.sin(angle) * radius) + radius) + "px";
+             div.style.top             = ((Math.cos(angle) * radius) + radius) + "px";
+		div=document.getElementById("img4");
+		div.onmouseout=function(){change1();};
+		div.onmouseover=function(){clearTimeout(timer)};
+		++a;
+		angle                 = Math.PI * (a / 3);
+             div.style.position        = "absolute";
+             div.style.left            = ((Math.sin(angle) * radius) + radius) + "px";
+             div.style.top             = ((Math.cos(angle) * radius) + radius) + "px";
+		div=document.getElementById("img3");
+		div.onmouseout=function(){change1();};
+		div.onmouseover=function(){clearTimeout(timer)};
+		++a; 
+		angle                 = Math.PI * (a / 3);
+             div.style.position        = "absolute";
+             div.style.left            = ((Math.sin(angle) * radius) + radius) + "px";
+             div.style.top             = ((Math.cos(angle) * radius) + radius) + "px";
+		div=document.getElementById("img2");
+		div.onmouseout=function(){change1();};
+		div.onmouseover=function(){clearTimeout(timer)};
+		++a; 
+		angle                 = Math.PI * (a / 3);
+             div.style.position        = "absolute";
+             div.style.left            = ((Math.sin(angle) * radius) + radius) + "px";
+             div.style.top             = ((Math.cos(angle) * radius) + radius) + "px";
+		div=document.getElementById("img1");
+		div.onmouseout=function(){change1();};
+		div.onmouseover=function(){clearTimeout(timer)};
+		++a;
+		angle                 = Math.PI * (a / 3);
+             div.style.position        = "absolute";
+             div.style.left            = ((Math.sin(angle) * radius) + radius) + "px";
+             div.style.top             = ((Math.cos(angle) * radius) + radius) + "px";
+             div=document.getElementById("img");
+             div.onmouseover=function(){clearTimeout(timer)};
+		div.onmouseout=function(){change1();};
+		function change1()
+		{
+			++a;
+			 angle                 = Math.PI * (a / 3);
+             div.style.position        = "absolute";
+
+             div.style.left            = ((Math.sin(angle) * radius) + radius) + "px";
+             div.style.top             = ((Math.cos(angle) * radius) + radius) + "px";
+			timer=setTimeout("change1()", 700);
+		}
+		var div=document.getElementById("img");
+		change1();
+	</script>
+</body>
+</html>
