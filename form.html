@@ -1,0 +1,77 @@
+<DOCTYPE html>
+<html>
+<head>
+	
+</head>
+<body>
+	<form>
+		<div style="display: flex;flex-direction: column;align-items: center;justify-content: center;">
+		<p>Education qualification : 
+			<select id="edu">
+				<option value="10th pass">10th pass</option>
+                <option value="12th pass">12th pass</option>
+                <option value="graduate">graduate</option>
+                <option value="masters">masters</option>
+                <option value="phd">masters</option>
+			</select>
+		</p>
+		<p>Phone number :
+			<input type="text" name="number" id="number" pattern="[0-9]{10}"><div style="color: red;visibility: hidden" id="nonumber">   Enter a valid number</div>
+		</p>
+		<p>Age :
+				<input type="text" id="age" name="AGE" ><div style="color: red;visibility: hidden" id="noage">    Enter a valid age</div>
+		</p>
+		<p>Gender :
+			<input type="radio" name="gender" value="1">Male  <input type="radio" name="gender" value="1"> Female
+		</p>
+		<p>Email :
+			<input type="email" id="email" name="email"><div style="color: red;visibility: hidden" id="nomail">    Enter a valid email</div>
+		</p>
+		<p>Password :
+			<input type="password" name="password" id="pass" >
+		</p>
+		<p>Re_Password :
+			<input type="password" name="Re_Password" id="repass"> <div style="color: red;visibility: hidden" id="nomatch">    Password and Re_Password should match</div>
+		</p>
+		<script >
+		function compare(){
+			console.log(document.getElementById("nomatch").visibility);
+        	if(document.getElementById("pass").value!=document.getElementById("repass").value)
+        		document.getElementById("nomatch").style.visibility="visible";
+        	else
+        		document.getElementById("nomatch").style.visibility="hidden";
+        }
+        function compare1(){
+        	if(!RegExp(/^(+91|0){0,1}[987]{1}[0-9]{9}$/).test(document.getElementById("number").value))
+        		document.getElementById("nonumber").style.visibility="visible";
+        	else
+        		document.getElementById("nonumber").style.visibility="hidden";
+        }
+        function compare2(){
+        	if(!RegExp(/^[0-9]{1,}$/).test(document.getElementById("age").value))
+        		document.getElementById("noage").style.visibility="visible";
+        	else
+        		document.getElementById("noage").style.visibility="hidden";
+        }function compare3(){
+        	if(!RegExp("^.+@.+\.[A-Za-z]+$").test(document.getElementById("email").value))
+        		document.getElementById("nomail").style.visibility="visible";
+        	else
+        		document.getElementById("nomail").style.visibility="hidden";
+        }
+
+		document.getElementById("pass").addEventListener('change', function f(){compare();});
+		document.getElementById("repass").addEventListener('change', function f(){compare();});
+		document.getElementById("number").addEventListener('change', function f(){compare1();});
+		document.getElementById("age").addEventListener('change', function f(){compare2();});
+		document.getElementById("email").addEventListener('change', function f(){compare3();});
+		</script>
+		<p>Name : 
+			<input type="text" name="name">
+		</p>
+		<p>City :
+			<input type="text" name="city">
+		</p>
+	</div>
+	</form>
+</body>
+</html>
